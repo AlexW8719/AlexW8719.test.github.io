@@ -1,0 +1,64 @@
+<div class="adminForm">
+
+	<!-- форма додавання користувачів -->
+	<div class="userForm">
+		<form name="userForm">
+
+			<div class="login">
+				<h2>Login</h2>
+				<input type="text" [(ngModel)]="userName" name="userForm" value="" placeholder="Enter login">
+			</div>
+
+			<div class="password">
+				<h2>Password</h2>
+				<input type="password" [(ngModel)]="userPass" name="userForm1" placeholder="Enter password">
+			</div>
+
+			<div class="email">
+				<h2>Email address</h2>
+				<input type="email" [(ngModel)]="userEmail" name="userForm2" placeholder="Enter email">
+			</div>
+			<ng-container *ngIf="stEdit; else elseTemplate">
+
+				<div class="button">
+					<input type="button" name="" (click)="changeInfo()" value="Save user">
+				</div>
+			</ng-container>
+			<ng-template #elseTemplate>
+				<div class="button">
+					<input type="button" (click)="takeInfo()" name="" value="Add user">
+				</div>
+			</ng-template>
+
+
+
+
+
+		</form>
+	</div>
+
+	<!-- Таблиця з базою даних усіх користувачів -->
+	<div class="dbUsers">
+		<div class="dbTitle">
+			<div class="dbNumber"><span>#</span></div>
+			<div class="dbLogin"><span>Login</span></div>
+			<div class="dbPassword"><span>Password</span></div>
+			<div class="dbEmail"><span>Email</span></div>
+			<div class="dbEdit"><span>Edit</span></div>
+			<div class="dbDelete"><span>Delete</span></div>
+		</div>
+		<div class="body">
+			<div class="row" *ngFor="let item of arr, index as i">
+				<div class="dbNumber"><span>{{i + 1}}</span></div>
+				<div class="dbLogin"><span>{{item.login}}</span></div>
+				<div class="dbPassword"><span>{{item.password}}</span></div>
+				<div class="dbEmail"><span>{{item.email}}</span></div>
+				<div class="dbEdit"><input type="button" value="Edit" on-click="editUser(i)" [disabled]="stEdit"></div>
+				<div class="dbDelete"><input type="button" on-click="deleteUser(i)" value="Delete" [disabled]="stEdit">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>

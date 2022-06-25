@@ -1,0 +1,285 @@
+// start: reset styles
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption,
+th,
+td {
+	text-align: left;
+	font-weight: normal;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: """";
+}
+// end: reset styles
+
+/*Start: Розмітка основного контейнера div.adminForm */
+div.adminForm {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 1200px;
+	height: 800px;
+	margin: 20px auto 0 auto;
+	padding: 10px;
+	overflow: scroll;
+}
+
+/*End: Розмітка основного контейнера div.adminForm */
+
+/* Start - Розмітка контейнера .userForm та .dbUsers */
+div.dbUsers,
+div.userForm {
+	height: 100%;
+}
+
+div.userForm {
+	width: 30%;
+}
+
+div.dbUsers {
+	width: 70%;
+}
+
+/* End - Розмітка контейнера .userForm та .dbUsers */
+
+/* Start - Розмітка усіх елементів форми userForm */
+/* form */
+
+
+/* .userForm => form => div */
+div.userForm form div {
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+/* .userForm => h2 */
+.userForm h2 {
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+
+/* .userForm => input[type="text"], input[type="password"],input[type="email"] */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+	width: 95%;
+	height: 50px;
+	border: 1px solid rgb(196, 196, 196);
+	border-radius: 4px;
+	padding-left: 10px;
+	font-family: inherit;
+	font-size: 20px;
+	color: rgb(127, 119, 119);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+	box-shadow: 0 0 5px 1px rgb(0, 225, 255);
+}
+
+/*.userForm => div.button input[type="button"]  */
+div.userForm div.button input[type="button"] {
+	width: 150px;
+	height: 50px;
+	border: 2px solid green;
+	border-radius: 20px;
+	font-size: 25px;
+	color: green;
+}
+
+div.userForm div.button input[type="button"]:hover {
+	background-color: green;
+	color: white;
+	cursor: pointer;
+}
+
+div.userForm div.button input[type="button"]:active {
+	box-shadow: 0px 0px 5px 1px rgb(6, 221, 6);
+}
+
+.off {
+	display: none;
+}
+
+/* End - Розмітка усіх елементів форми userForm */
+
+/* Start - Розмітка усіх елементів форми dbUsers */
+/* .dbUsers => .dbTitle, .row  */
+div.dbTitle,
+div.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 20px;
+
+}
+
+/* .dbUsers => .dbTitle  */
+div.dbTitle {
+	font-weight: bold;
+}
+
+/* .dbUsers => .dbNumber, .dbLogin, .dbPassword, .dbEmail, .dbEdit, .dbDelete  */
+.dbNumber {
+	width: 5%;
+}
+
+.dbLogin {
+	width: 20%;
+	word-wrap: break-word;
+}
+
+.dbPassword {
+	width: 20%;
+	word-wrap: break-word;
+}
+
+.dbEmail {
+	width: 25%;
+	word-wrap: break-word;
+}
+
+.dbEdit {
+	width: 15%;
+}
+
+.dbDelete {
+	width: 15%;
+}
+
+/* .dbUsers => .button  */
+div.dbUsers input {
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+div.dbUsers input:hover {
+	cursor: pointer;
+}
+
+div.dbEdit input {
+	background-color: orange;
+}
+
+div.dbEdit input:active {
+	box-shadow: 0 0 5px 3px rgba(255, 166, 0, 0.723);
+}
+
+div.dbDelete input {
+	background-color: red;
+	color: white;
+}
+
+div.dbDelete input:active {
+	box-shadow: 0 0 5px 3px rgba(255, 0, 0, 0.723);
+}
+
+/* End - Розмітка усіх елементів форми dbUsers */
