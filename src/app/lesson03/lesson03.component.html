@@ -1,0 +1,22 @@
+<div class="tasks">
+	<div class="user">
+		<h1>Plan your day!</h1>
+		<h2>User: {{user}}. Count of Task {{arrDb.length}}</h2>
+		<hr>
+	</div>
+	<div class="addTasks">
+		<input type="text" name="" id="">
+		<input type="button" value="Add" (click)="addTasks()">
+	</div>
+	<div class="listTasks">
+		<app-child03 [task]="arrDb" (fromChild)="edit($event)"></app-child03>
+	</div>
+
+	<div class="modal" *ngIf="editor">
+		<div class="chengeTask">
+			<input type="text" name="" id="" [value]="str">
+			<input type="button" value="save" (click)="saveEditor()">
+		</div>
+	</div>
+
+</div>

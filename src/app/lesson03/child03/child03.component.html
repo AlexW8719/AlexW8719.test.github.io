@@ -1,0 +1,17 @@
+<div class="titleTask row">
+	<div class="">#</div>
+	<div class="">Task</div>
+	<div class="">Check</div>
+	<div class="">Done/in Progress</div>
+	<div class="">Edit</div>
+	<div class="">Delete</div>
+</div>
+<div class="task row" *ngFor="let item of task; let i = index">
+	<div class="">{{i+1}}</div>
+	<div class="">{{item.tasks}}</div>
+	<div class=""><input type="checkbox" (click)="statusTask(i)" [checked]="item.checked" name="" id=""></div>
+	<div [class]="item.class" [textContent]="item.taskStatus"></div>
+	<div class=""><input type="button" value="Edit" (click)="takeInfo(i)"></div>
+	<div class=""><input [class]="item.deleteClass" type="button" (click)="deleteTask(i)" value="Delete"
+			[disabled]="item.deleteB"></div>
+</div>

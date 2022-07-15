@@ -1,0 +1,112 @@
+.titleTask{
+	font-weight: bolder;
+	margin-bottom: 15px;
+}
+
+.row{
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+	margin-bottom: 15px;
+	line-height: 45px;
+}
+
+.row div:nth-child(1){
+	width: 50px;
+}
+
+.row div:nth-child(2){
+	width: 350px;
+}
+
+.row div:nth-child(3){
+	width: 150px;
+}
+
+.row div:nth-child(4){
+	width: 200px;
+}
+
+.row div:nth-child(5){
+	width: 150px;
+}
+
+.row div:nth-child(6){
+	width: 150px;
+}
+
+input[type="button"]{
+	padding: 10px 20px;
+	font-size: 25px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px 1px black;
+}
+
+input[type="checkbox"]{
+	height: 20px;
+	width: 20px;
+}
+
+input[value ="Edit"]{
+background-color: rgb(236, 164, 7);
+}
+
+.done{
+background-color: red;
+}
+
+input[type="button"]:hover{
+cursor: pointer;
+}
+
+input[type="button"]:active{
+box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.529);
+}
+
+.red{
+	color:red;
+}
+
+.green{
+	color:green;
+}
+
+.disebled{
+	background-color:rgb(248, 164, 164);
+	color: white;
+}
+
+// modal
+
+
+.modal input{
+	font-size: 25px;
+}
+
+.modal input[type="text"]{
+	padding-left: 5px;
+	height: 40px;
+	width: 900px;
+	border: 1px solid rgba(0, 0, 0, 0.402);
+	border-radius: 5px;
+}
+
+.modal input[type="button"]{
+	margin-left: 20px;
+	height: 45px;
+	width: 150px;
+	background-color: green;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px 1px black;
+}
+
+.modal input[type="button"]:active{
+box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.529);
+}
+
+.modal input[type="button"]:hover{
+cursor: pointer;
+}

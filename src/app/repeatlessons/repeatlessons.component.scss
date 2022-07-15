@@ -1,0 +1,49 @@
+.ball{
+	width: 100px;
+	height: 100px;
+	margin: 50px auto;
+	border: 1px solid black;
+	border-radius: 50%;
+	background-color: bisque;
+	text-align: center;
+	line-height: 100px;
+	font-size: 45px;
+}
+.sircle{
+	width: 100px;
+	height: 100px;
+	margin: 50px auto;
+	border: 1px solid black;
+	background-color:aquamarine;
+		text-align: center;
+	line-height: 100px;
+	font-size: 45px;
+}
+.roob{
+	width: 300px;
+	height: 100px;
+	margin: 50px auto;
+	border: 1px solid black;
+	background-color:rgb(129, 127, 255);
+	text-align: center;
+	line-height: 100px;
+	font-size: 45px;
+}
+
+.modal{
+	position:absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(4, 4, 4, 0.379);
+}
+
+.big{
+	font-size: 55px;
+	text-align: center;
+	margin: 0 auto;
+}
+.red{
+	color: red;
+}
