@@ -1,0 +1,58 @@
+<div class="phoneBook">
+
+	<h1>My phone book!</h1>
+
+	<div class="searchAndAdd">
+		<input type="search" name="" id="" placeholder="search text goes here" [(ngModel)]="field">
+		<input type="button" class="bthAdd" (click)="openModaAdd()" value="add phone">
+	</div>
+
+	<div class="tablePhoneBook">
+		<table>
+			<thead>
+				<th class="firstName" (click)="changeSortName('')">First name <img src="./assets/hw04/arrow-down.svg"
+						[class]="arrName.class" alt=""></th>
+				<th class=" lastName" (click)="changeSortLName('')">Last name<img src="./assets/hw04/arrow-down.svg"
+						[class]="arrLName.class" alt=""></th>
+				<th class="phoneNum" (click)="changeSortNum('')">Number<img src="./assets/hw04/arrow-down.svg"
+						[class]="arrNum.class" alt=""></th>
+				<th class="bthRow">edit</th>
+				<th class="bthRow">delete</th>
+			</thead>
+			<tr class="phoneBookInfo" *ngFor="let item of arrPhoneBook | search:field | sort:str ; let i=index">
+				<td>{{item.name}}</td>
+				<td>{{item.lastName}}</td>
+				<td>{{item.numbers}}</td>
+				<td><input class="bthEdit" type="button" value="edit" (click)="openEditItems(i)"></td>
+				<td><input class="bthDelete" type="button" value="delete" (click)="delete(i)"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="modelAdd" *ngIf="modalAdd">
+	<div class="createNewPhone">
+		<h2>Add phone</h2>
+		<input type="text" class="name" name="" id="" placeholder="first name goes here">
+		<input type="text" class="lastName" name="" id="" placeholder="last name goes here">
+		<input type="number" class="numbers" name="" id="" placeholder="number phone goes here">
+		<div>
+			<input type="button" value="Save" (click)="craeteNewItems()">
+			<input type="button" value="Close" (click)="openModaAdd()">
+		</div>
+	</div>
+</div>
+
+<div class="modelEdit" *ngIf="modalEdit">
+	<div class="createNewPhone">
+		<h2>Edit phone</h2>
+		<input type="text" class="edName" name="" id="" [value]="nameEd">
+		<input type="text" class="edLastName" name="" id="" [value]="lastNameEd">
+		<input type="number" class="edNumbers" name="" id="" [value]="numEd">
+		<div>
+			<input type="button" value="Update" (click)="saveEdit()">
+			<input type="button" value="Close" (click)="closeEdit()">
+		</div>
+	</div>
+
+</div>

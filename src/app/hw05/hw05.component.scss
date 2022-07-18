@@ -1,0 +1,143 @@
+// general style for .phoneBook
+
+body{
+	position: relative;
+}
+
+.phoneBook{
+	margin: 0 auto;
+	width: 900px;
+	font-size: 25px;
+}
+
+// general style for input[type="search"] elements
+
+input[type="search"]{
+	height: 40px;
+	width: 700px;
+	margin: 0 5px 0 0;
+	border: 1px solid black;
+	border-radius: 5px;
+	font-size: 25px;
+}
+
+// general style for input[type="button"] elements
+
+input[type="button"]{
+	height: 44px;
+	margin: 0 0 0 5px;
+	padding:0 20px 0 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 25px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.64);
+}
+
+input[type="button"]:hover{
+	cursor: pointer;
+}
+
+input[type="button"]:active{
+	height: 44px;
+	padding:0 20px 0 20px;
+	box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.64);
+}
+
+//style for input[type="button"] elements
+
+.bthAdd{
+	background: green;
+	color: white;
+}
+
+.bthEdit{
+	background: yellow;
+}
+
+.bthDelete{
+	background: red;
+	color: white;
+}
+
+//style for table
+
+table{
+	text-align: center;
+}
+
+th{
+	padding: 20px 0 10px 0;
+}
+
+th.firstName, th.lastName{
+	width: 150px;
+}
+
+th.phoneNum{
+	width: 250px;
+}
+
+th.bthRow{
+	width: 170px;
+}
+
+td{
+	padding: 10px 0;
+}
+
+.arrowD{
+	width: 0px;
+	background-color: black;
+	border:10px solid black;
+	border-end-end-radius: 0%;
+	border-end-start-radius:0% ;
+	border-top-left-radius: 100%;
+	border-top-right-radius: 100%;
+}
+
+//rotete img
+.up{
+	transform: rotate(180deg);
+}
+.down{
+	transform: rotate(0deg);
+}
+.none{
+	visibility: hidden;
+}
+
+// style .modelAdd .modelEdit
+
+.modelAdd, .modelEdit{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.521);
+	position:absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.createNewPhone{
+	width: 400px;
+	height: 400px;
+	background-color:white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+.createNewPhone input[type="text"], .createNewPhone input[type="number"]{
+	width: 350px;
+	height: 40px;
+	font-size: 25px;
+}
+
+.createNewPhone div input{
+	margin: 0 20px;
+}
