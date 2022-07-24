@@ -1,0 +1,20 @@
+<app-nav></app-nav>
+<div class="mainContainer">
+	<!-- <h1>List of prohibited words:</h1> -->
+	<div class="containerWords">
+		<p>
+			<span class="badW">Bad words: </span><span class="badWords">{{list}}</span>
+		</p>
+		<form name="f1">
+			<div class="complateBW">
+				<input type="text" name="" placeholder="Please write a word!" id="">
+				<input type="button" class="add" value="Add" (click)="addBadWords()">
+				<input type="button" class="reset" value="Reset" (click)="resetLists()">
+			</div>
+			<div class="result">
+				<textarea name="" placeholder="text here..."></textarea>
+				<input type="button" class="cenzor" (click)="cenzorList()" value="Cenzor">
+			</div>
+		</form>
+	</div>
+</div>

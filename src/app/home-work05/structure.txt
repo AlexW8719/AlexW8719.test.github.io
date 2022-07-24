@@ -1,0 +1,22 @@
+app/
+	hw-routes/
+		components/
+			header.component
+		angular-pages/
+			home/
+				home.component
+			works/
+				cenzor.component
+				userList.component
+				taskList.component
+		shared/
+			styles/
+				_variables.scss
+				_mixins.scss
+				_base.scss
+			interfaces/
+			pipes/
+			directives/
+			guards/
+			services/	
+		

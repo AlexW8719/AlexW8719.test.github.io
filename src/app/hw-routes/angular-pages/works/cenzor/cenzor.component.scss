@@ -1,0 +1,71 @@
+.mainContainer {
+	margin: 50px auto 0 auto;
+	padding: 10px;
+	width: 80%;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	font-size: 28px;
+}
+
+.result {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	width: 520px;
+}
+
+.badW {
+	font-weight: bold;
+}
+
+.badWords {
+	font-weight: bold;
+	color: red;
+}
+
+.complateBW {
+	margin-bottom: 40px;
+}
+
+.complateBW input {
+	height: 40px;
+	border-radius: 5px;
+}
+
+.complateBW input[type="text"] {
+	width: 300px;
+}
+
+.complateBW input[type="button"] {
+	width: 100px;
+	height: 48px;
+}
+
+.add {
+	background-color: green;
+}
+
+.reset {
+	background-color: red;
+}
+
+textarea {
+	height: 120px;
+}
+
+.result input {
+	margin-top: 20px;
+	height: 48px;
+	border-radius: 5px;
+	background-color: yellow;
+}
+
+.containerWords p {
+	margin-left: 155px;
+	text-align: left;
+}

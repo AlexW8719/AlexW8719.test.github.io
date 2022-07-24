@@ -14,6 +14,17 @@ import { Child04Component } from './lesson04/child04/child04.component';
 import { HW05Component } from './hw05/hw05.component';
 import { SearchPipe } from './hw05/search.pipe';
 import { SortPipe } from './hw05/sort.pipe';
+import { HomeWork05Component } from './home-work05/home-work05.component';
+
+import { MainComponent } from './hw-routes/components/main/main.component';
+import { NavComponent } from './hw-routes/components/nav/nav.component';
+import { HeaderComponent } from './hw-routes/components/header/header.component';
+
+import { HomeComponent } from './hw-routes/angular-pages/home/home/home.component';
+import { CenzorComponent } from './hw-routes/angular-pages/works/cenzor/cenzor.component';
+import { UserListComponent } from './hw-routes/angular-pages/works/user-list/user-list.component';
+import { TaskListComponent } from './hw-routes/angular-pages/works/task-list/task-list.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +39,16 @@ import { SortPipe } from './hw05/sort.pipe';
     HW05Component,
     SearchPipe,
     SortPipe,
+    HomeWork05Component,
 
+    MainComponent,
+    NavComponent,
+    HeaderComponent,
+
+    HomeComponent,
+    CenzorComponent,
+    UserListComponent,
+    TaskListComponent,
   ],
   imports: [
     BrowserModule,

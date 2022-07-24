@@ -1,0 +1,23 @@
+nav{
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+nav span{
+	width: 300px;
+	display:flex;
+	// flex-direction: row;
+	justify-content: space-between;
+}
+
+a {
+  color:rgb(136, 136, 235);
+  font-size: 18px;
+}
+
+.active{
+	color: greenyellow;
+}

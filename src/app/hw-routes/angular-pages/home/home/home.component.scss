@@ -1,0 +1,51 @@
+main{
+	
+	height: 80vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	justify-items: center;
+	align-items: center;
+}
+
+.tasks{
+	width: 400px;
+	height: 400px;
+	
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+figure{
+	padding: 0;
+	margin: 0;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+img{
+	width: 398px;
+	height: 298px;
+}
+
+button{
+	height: 50px;
+	background-color: green;
+	border-radius: 5px;
+	border:none;
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.855);
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+button:active{
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.59);
+}
