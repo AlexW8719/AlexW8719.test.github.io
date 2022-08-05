@@ -24,6 +24,7 @@ import { HomeComponent } from './hw-routes/angular-pages/home/home/home.componen
 import { CenzorComponent } from './hw-routes/angular-pages/works/cenzor/cenzor.component';
 import { UserListComponent } from './hw-routes/angular-pages/works/user-list/user-list.component';
 import { TaskListComponent } from './hw-routes/angular-pages/works/task-list/task-list.component';
+import { BlogsComponent } from './HW06/blogs/blogs.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { TaskListComponent } from './hw-routes/angular-pages/works/task-list/tas
     CenzorComponent,
     UserListComponent,
     TaskListComponent,
+    BlogsComponent,
   ],
   imports: [
     BrowserModule,

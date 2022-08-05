@@ -1,0 +1,216 @@
+header{
+	width: 100%;
+	
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	background-color: black;
+	color: white;
+}
+
+header .blogsLogo{
+	padding: 0 10px;
+}
+
+header .adminPanel{
+	padding: 0 10px;
+	display: flex;
+	justify-content: space-between;
+	place-items: center;
+}
+
+header .adminPanel button{
+	width: 80px;
+	height: 40px;
+	
+}
+
+.sIn{
+	border: 2px solid green;
+	border-radius: 4px 0px 0px 4px;
+	color: green;
+	font-size: 16px;
+	background-color: transparent;
+}
+
+.sIn:hover{
+	cursor: pointer;
+	background:green;
+	
+	color: white;
+}
+
+.sUp{
+	border: 2px solid rgb(0, 110, 255);
+	border-radius: 0px 4px 4px 0px;
+	color: rgb(0, 110, 255);
+	font-size: 16px;
+	background-color: transparent;
+}
+
+.sUp:hover{
+	cursor: pointer;
+	background:rgb(0, 110, 255);
+	border: 2px solid rgb(0, 110, 255);
+	color: white;
+}
+
+.addPost{
+	border: 2px solid rgb(7, 171, 7);
+	border-right: 2px solid transparent;
+	border-radius: 4px 0px 0px 4px;
+	color: rgb(7, 171, 7);
+	font-size: 16px;
+	background-color: transparent;
+}
+
+.addPost:hover{
+	cursor: pointer;
+	background: rgb(7, 171, 7);
+	border: 2px solid rgb(7, 171, 7);
+	color: white;
+}
+
+.sOut{
+	border: 2px solid orange;
+	border-left: 2px solid transparent;
+	border-radius: 0px 4px 4px 0px;
+	color: orange;
+	font-size: 16px;
+	background-color: transparent;
+}
+
+.sOut:hover{
+	cursor: pointer;
+	background: orange;
+	border: 2px solid orange;
+	color: black;
+}
+
+.user{
+	border: 2px solid orange;
+	border-radius:0px;
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+	background-color: orange;
+}
+
+.blogs{
+	margin: 15px 100px 15px 100px;
+	padding: 0px 10px 0px 10px;
+	border:1px solid rgb(198, 195, 195);
+	border-radius:4px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.postedBy{
+	color: gray;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.dataPost{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.dataPost button{
+	border:transparent;
+	height: 40px;
+	width: 80px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.dataPost button:hover{
+cursor: pointer;
+}
+
+.editBtn{
+	background-color: orange;
+	color:black;
+}
+
+.deleteBtn{
+	background-color: red;
+	color:white;
+}
+
+ .blogs .dataPost img{
+	margin-top: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+.dataPost span{
+	color:rgb(126, 117, 117);
+}
+
+.modal{
+	display: flex;
+	justify-content: row;
+	justify-content: center;
+	place-items: center;
+	background-color: rgba(0, 0, 0, 0.534);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+.modalSUp, .modalSIn, .modalPost{
+	padding: 10px;
+	width: 600px;
+	height: 500px;
+	background-color: #fff;
+}
+
+input{
+	margin-bottom: 20px;
+	width: 590px;
+	height: 40px;
+	box-shadow: 0 0 1px 1px rgb(159, 156, 156);
+	border-radius:4px;
+	border:none;
+}
+
+textarea{
+	margin-bottom: 20px;
+	width: 590px;
+	height: 170px;
+}
+
+input:focus{
+	box-shadow: 0 0 10px 5px rgba(15, 185, 185, 0.356);
+	outline: none;
+}
+
+.bthModal button{
+	margin: 0 5px 0 5px;
+	border:transparent;
+	height: 40px;
+	width: 80px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: gray;
+	border-radius:4px;
+	box-shadow: 0 0 1px 1px black;
+}
+
+.bthModal{
+	text-align: right;
+}
+
+.bthModal button:hover{
+	cursor: pointer;
+}
+
+.bthModal button:active{
+	box-shadow: 0 0 1px 1px transparent;
+}

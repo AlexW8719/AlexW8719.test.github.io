@@ -1,0 +1,100 @@
+<header>
+	<div class="blogsLogo">
+		<h1>Angular Blog</h1>
+	</div>
+
+	<div class="adminPanel">
+		<div class="singIn" *ngIf="!statusUsers">
+			<button class="sIn" (click)="singIn()">Sing In</button>
+			<button class="sUp" (click)="openSingUp()">Sing Up</button>
+		</div>
+		<div class="singOut" *ngIf="statusUsers">
+			<button class="addPost" (click)="openAddMod()">Add post</button>
+			<button class="user">{{userNames}}</button>
+			<button class="sOut" (click)="sOut()"> Sing Out</button>
+		</div>
+	</div>
+</header>
+
+<main>
+
+	<div class="blogs" *ngFor="let post of postsBlogs; let i = index">
+		<div class="posts">
+			<h2 class="title">{{post.topic}}</h2>
+			<p class="postedBy"><span>Posted by:{{post.postedBy}}</span></p>
+			<p class="postContent">{{post.message}}</p>
+		</div>
+
+		<div class="dataPost">
+			<div class="timePost">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Clock_01-24.svg" alt="">
+				<span>{{post.date | date:'dd.MM.YY HH:mm'}}</span>
+			</div>
+			<div class="adminPanels" *ngIf="statusUsers">
+				<button class="editBtn" (click)="openEditor(i)">Edit</button>
+				<button class="deleteBtn" (click)="delete(i)">Delete</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" *ngIf="statusModal">
+
+		<div *ngIf="statusSingUp" class="modalSUp">
+			<h2>Sing Up</h2>
+			<p>Username:</p>
+			<input [(ngModel)]="username" type="text" name="usernameSUp" id="">
+			<p>Email:</p>
+			<input [(ngModel)]="email" type="email" name="emailSUp" id="">
+			<p>Password:</p>
+			<input [(ngModel)]="password" type="password" name="passSUp" id="">
+			<br>
+			<div class="bthModal">
+				<button class="closeBtn" (click)="close()">Close</button>
+				<button class="submitBtn" (click)="singUp()" [disabled]="!password || !email|| !username">Submit</button>
+			</div>
+		</div>
+
+		<div *ngIf="statusSingIn" class="modalSIn">
+			<h2>Sing In</h2>
+
+			<p>Email:</p>
+			<input [(ngModel)]="email" type="email" name="emailSUp" id="">
+			<p>Password:</p>
+			<input [(ngModel)]="password" type="password" name="passSUp" id="">
+			<br>
+			<div class="bthModal">
+				<button class="closeBtn" (click)="close()">Close</button>
+				<button class="submitBtn" (click)="enterAccount()" [disabled]="!password || !email">Submit</button>
+			</div>
+		</div>
+
+		<div *ngIf="statusAddPost" class="modalPost">
+			<h2>Add post</h2>
+
+			<p>Title</p>
+			<input type="text" [(ngModel)]="topic" name="textPost" id="">
+			<p>Text</p>
+			<textarea [(ngModel)]="message" name="" id="" cols="30" rows="10"></textarea>
+			<br>
+			<div class="bthModal">
+				<button class="closeBtn" (click)="close()">Close</button>
+				<button class="submitBtn" (click)="addPosts()" [disabled]="!topic || !message">Post</button>
+			</div>
+		</div>
+
+		<div *ngIf="statusEditPost" class="modalPost edit">
+			<h2>Edit post</h2>
+
+			<p>Title</p>
+			<input type="text" [(ngModel)]="topic" name="editpost" id="" attr.[value]="{{topicEd}}">
+			<p>Text</p>
+			<textarea [(ngModel)]="message" name="editM" id="" cols="30" rows="10">{{messageEd}}</textarea>
+			<br>
+			<div class="bthModal">
+				<button class="closeBtn" (click)="closeEd()">Close</button>
+				<button class="submitBtn" (click)="editPost()" [disabled]="!topic || !message">Edit</button>
+			</div>
+		</div>
+
+	</div>
+</main>

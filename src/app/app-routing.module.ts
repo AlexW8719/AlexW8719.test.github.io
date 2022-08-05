@@ -7,12 +7,12 @@ import { UserListComponent } from './hw-routes/angular-pages/works/user-list/use
 import { TaskListComponent } from './hw-routes/angular-pages/works/task-list/task-list.component';
 
 const routes: Routes = [
-  { path: `home`, component: HomeComponent },
+  // { path: `home`, component: HomeComponent },
 
-  { path: `works/censor`, component: CenzorComponent },
-  { path: `works/userlist`, component: UserListComponent },
-  { path: `works/tasklist`, component: TaskListComponent },
-  { path: ``, redirectTo: `/home`, pathMatch: 'full' },
+  // { path: `works/censor`, component: CenzorComponent },
+  // { path: `works/userlist`, component: UserListComponent },
+  // { path: `works/tasklist`, component: TaskListComponent },
+  // { path: ``, redirectTo: `/home`, pathMatch: 'full' },
 ];
 
 @NgModule({
