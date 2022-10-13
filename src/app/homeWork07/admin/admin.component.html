@@ -1,0 +1,15 @@
+<div class="container m-0">
+	<div class="adminPanel">
+		<div class="d-flex align-items-start">
+			<div class="nav flex-column nav-pills me-3 navBtn" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+				<button class="nav-link" [routerLink]="[ 'blogs' ]" routerLinkActive="active"
+					type="button">Blogs</button>
+			</div>
+			<div class="tab-content w-100" id="v-pills-tabContent">
+				<router-outlet></router-outlet>
+			</div>
+		</div>
+	</div>
+	 
+	<div class="options"></div>
+</div>

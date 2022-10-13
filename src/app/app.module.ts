@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,11 +21,17 @@ import { MainComponent } from './hw-routes/components/main/main.component';
 import { NavComponent } from './hw-routes/components/nav/nav.component';
 import { HeaderComponent } from './hw-routes/components/header/header.component';
 
+import { HeaderComponent07} from './homeWork07/components/header/header.component';
+
 import { HomeComponent } from './hw-routes/angular-pages/home/home/home.component';
 import { CenzorComponent } from './hw-routes/angular-pages/works/cenzor/cenzor.component';
 import { UserListComponent } from './hw-routes/angular-pages/works/user-list/user-list.component';
 import { TaskListComponent } from './hw-routes/angular-pages/works/task-list/task-list.component';
 import { BlogsComponent } from './HW06/blogs/blogs.component';
+
+import { BlogsComponent07 } from './homeWork07/pages/blogs/blogs.component';
+import { AdminComponent } from './homeWork07/admin/admin.component';
+import { AdminBlogsComponent } from './homeWork07/admin/admin-blogs/admin-blogs.component';
 
 
 @NgModule({
@@ -41,7 +48,7 @@ import { BlogsComponent } from './HW06/blogs/blogs.component';
     SearchPipe,
     SortPipe,
     HomeWork05Component,
-
+    
     MainComponent,
     NavComponent,
     HeaderComponent,
@@ -51,11 +58,17 @@ import { BlogsComponent } from './HW06/blogs/blogs.component';
     UserListComponent,
     TaskListComponent,
     BlogsComponent,
+    AdminComponent,
+    AdminBlogsComponent,
+
+    HeaderComponent07,
+    BlogsComponent07,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

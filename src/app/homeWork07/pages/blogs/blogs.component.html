@@ -1,0 +1,6 @@
+<figure class="figure ms-3" *ngFor="let blog of userBlogs">
+	<img [src]="blog.imgPath" class="figure-img img-fluid rounded" alt="...">
+	<h2>{{blog.author}}</h2>
+	<figcaption class="figure-caption">{{blog.title}}</figcaption>
+	<p>{{blog.description}}</p>
+</figure>

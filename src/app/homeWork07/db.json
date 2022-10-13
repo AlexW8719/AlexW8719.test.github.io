@@ -1,0 +1,25 @@
+{
+  "blogs": [
+    {
+      "title": "Titile-2",
+      "description": "some text-1",
+      "author": "RusMat",
+      "imgPath": "https://images.wallpaperscraft.com/image/single/vietnam_tropics_sea_84476_2780x2780.jpg",
+      "id": 7
+    },
+    {
+      "title": "Title-2",
+      "description": "Some text-2",
+      "author": "Alex",
+      "imgPath": "https://images.wallpaperscraft.com/image/single/vietnam_tropics_sea_84476_2780x2780.jpg",
+      "id": 8
+    },
+    {
+      "title": "Title-3",
+      "description": "Some text-3",
+      "author": "Vita",
+      "imgPath": "https://images.wallpaperscraft.com/image/single/vietnam_tropics_sea_84476_2780x2780.jpg",
+      "id": 9
+    }
+  ]
+}

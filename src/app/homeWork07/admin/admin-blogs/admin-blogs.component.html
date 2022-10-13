@@ -1,0 +1,52 @@
+<div class="container w-100">
+	<form class="w-100" name="blogs">
+		<div>
+			<input name="blogs1" type="text" class="w-100 mb-1" [(ngModel)]="title">
+		</div>
+		<div>
+			<textarea name="blogs2" id="" cols="30" rows="3" class="w-100" [(ngModel)]="description">
+
+			</textarea>
+		</div>
+		<div>
+			<input name="blogs3" type="text" class="w-100 mb-1" [(ngModel)]="author">
+		</div>
+		<div>
+			<ng-container *ngIf="saveBlogs; else elseTemplate">
+				<button [disabled]="!title || !description || !author" (click)="addBlogs()">Add</button>
+				
+			</ng-container>
+
+			<ng-template #elseTemplate>
+				<button [disabled]="!title || !description || !author" (click)="saveBlog()">Save</button>
+			</ng-template>
+			
+			
+			
+		</div>
+	</form>
+	
+	<table class="table col-12">
+		<thead class="">
+		  <tr>
+			 <th scope="col" class="col-1">#</th>
+			 <th scope="col" class="col-2">Title</th>
+			 <th scope="col" class="col-3">Text</th>
+			 <th scope="col" class="col-2">Author</th>
+			 <th scope="col" class="col-2">Edit</th>
+			 <th scope="col" class="col-2">Delete</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr *ngFor="let blog of adminBlogs; let i=index">
+			 <th scope="row">{{i+1}}</th>
+			 <td>{{blog.title}}</td>
+			 <td>{{blog.description}}</td>
+			 <td>{{blog.author}}</td>
+			<td><button [disabled]="bthBlogs" (click)="upBlogs(i, adminBlogs)">Edit</button></td>
+			<td><button [disabled]="bthBlogs" (click)="deleteBlog(blog.id)">Delete</button></td>
+		  </tr>
+		  <tr>
+		</tbody>
+	 </table>
+</div>
